@@ -1,21 +1,20 @@
 #!/usr/bin/ruby
 
 require '../lib/class.rb' # Clase 
+require "test/unit"
+ 
+class TestCircunferencia < Test::Unit::TestCase
+	
+	def test_1 # Se introduce una prueba correcta
+		assert_equal(5, Circunferencia.new.radio(31.4159265), 'Deberia ser igual a 2.38732414910635') # valor 2.38732414910635
+	end
 
-c = Circunferencia.new
+	def test_2 # Se introduce un valor no numerico
+		assert_raise (RuntimeError) { Circunferencia.new('a')}
+	end
 
-# Prueba unitaria 1: recibe como parámetro un número
-# Devuelve correctamente resultado
-r = c.radio(12)
-c.mostrar(r)
+	def test_3 # Se introduce un valor negativo
+		assert_raise (RuntimeError) {Circunferencia.new(-5)}
+	end
 
-
-# Prueba unitaria 2: recibe como parámetro un char
-a = "a"
-r = c.radio(a)
-c.mostrar(r)
-
-# Prueba unitaria 3: recibe como parámetro un string
-a = "hola"
-r = c.radio(a)
-c.mostrar(r)
+end
