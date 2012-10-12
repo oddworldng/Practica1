@@ -1,6 +1,6 @@
 task :default => :test
 
-desc "Run test.rb with ruby"
+desc "Ejecutamos test/test.rb"
 task :test do
 	cd "./test"
 	ruby "test.rb"
