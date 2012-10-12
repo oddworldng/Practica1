@@ -10,7 +10,7 @@ class TestCircunferencia < Test::Unit::TestCase
 	end
 
 	def test_2 # Se introduce un valor no numerico
-		assert_raise (RuntimeError) { Circunferencia.new('a')}
+		assert_raise (RuntimeError) {Circunferencia.new('a')}
 	end
 
 	def test_3 # Se introduce un valor negativo

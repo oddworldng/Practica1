@@ -1,0 +1,7 @@
+task :default => :test
+
+desc "Run test.rb with ruby"
+task :test do
+	cd "./test"
+	ruby "test.rb"
+end

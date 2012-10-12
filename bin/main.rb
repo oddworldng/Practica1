@@ -2,7 +2,6 @@
 
 require '../lib/class.rb' # Clase 
 
-
 c = Circunferencia.new
 print "Introduce el perimetro: "
 STDOUT.flush
